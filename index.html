@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - DestinyAppMarvin</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="destiny-app">
+  <div v-for="card in cards" class="card" v-bind:class="card.color">
+    <img class="card" v-bind:src="card.img" />
+    <div class="health">
+      {{card.health}}
+    </div>
+    <div class="rarity" v-bind:class="{rare:card.rarity, legendary: !card.rarity}">
+      {{card.setNumber}}
+    </div>
+    <div class="name">
+      {{card.name}}
+    </div>
+    <div class="affl" v-bind:class="card.affl">
+      {{card.affl}}
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
